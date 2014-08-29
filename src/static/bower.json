@@ -1,0 +1,23 @@
+{
+  "name": "pizza",
+  "version": "0.0.0",
+  "authors": [
+    "AndresRoot <strike1609@gmail.com>"
+  ],
+  "description": "just my game",
+  "main": "css/main.css",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser-official": "~2.0.7"
+  }
+}

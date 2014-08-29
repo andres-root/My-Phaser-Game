@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def pizza():
+    return render_template('pizza.html')
+
+if __name__ == '__main__':
+    app.run()
