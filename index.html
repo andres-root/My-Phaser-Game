@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Make me a Pizza</title>
-        <script src="/src/static/phaser.min.js"></script>
+        <script src="src/static/phaser.min.js"></script>
     </head>
     <body>
     <script type="text/javascript">
@@ -13,7 +13,7 @@
             var game = new Phaser.Game(800, 600, Phaser.AUTO, 'my-first-fucking-game', { preload: preload, create: create, update: update, render: render }, true);
             
             function preload () {
-                game.load.image('copter', '/src/static/assets/mecopter.png');
+                game.load.image('copter', 'src/static/assets/mecopter.png');
             }
             
             var sprite;
