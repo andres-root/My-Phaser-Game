@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Make me a Pizza</title>
+        <script src="/src/static/phaser.min.js"></script>
+    </head>
+    <body>
+    <script type="text/javascript">
+        
+        window.onload = function() {
+            
+            var game = new Phaser.Game(800, 600, Phaser.AUTO, 'my-first-fucking-game', { preload: preload, create: create, update: update, render: render }, true);
+            
+            function preload () {
+                game.load.image('copter', '/src/static/assets/mecopter.png');
+            }
+            
+            var sprite;
+            
+            function create () {
+                game.physics.startSystem(Phaser.Physics.ARCADE)
+                sprite = game.add.sprite(game.world.centerX, game.world.centerY, 'copter');
+                sprite.anchor.set(0.5);
+                game.physics.arcade.enable(sprite)
+            }
+
+            function update() {
+                if(game.physics.arcade.distanceToPointer(sprite, game.input.activePointer) > 8) {
+                    game.physics.arcade.moveToPointer(sprite, 300);
+                } else {
+                    sprite.body.velocity.set(0);
+                }
+            }
+
+            function render(){
+                //game.debug.inputInfo(32, 32);
+            }
+
+        };
+
+    </script>
+
+    </body>
+</html>
